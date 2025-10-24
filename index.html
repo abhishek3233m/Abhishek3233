@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abhishek Yadav - Personal Website</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS (Animate On Scroll) CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- FontAwesome for Social Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+        
+    
+body.light-mode {
+ 
+ background-image:url("https://i.postimg.cc/zDPzXZ0x/Futuristic-Red-Blue-Background-Design-Graphics-30683310-1.jpg");
+ background-size:cover;
+ 
+      color: #333;
+      transition: background-color 0.5s, color 0.5s;
+      
+    }
+    body.dark-mode {
+      background-image:url("https://i.postimg.cc/rFgPN4mT/luxury-navy-blue-gradient-background-with-golden-l-vector-29114595.jpg");
+      color: #f1f1f1;
+      transition: background-color 0.5s, color 0.5s;
+      
+    }
+
+    html {
+      scroll-behavior: smooth;
+      
+    } 
+    
+
+  
+  header {
+    margin-top:40px;
+    padding-bottom:40px;
+      text-align: center;
+     color:white;
+      padding: 80px 20px 40px 20px;
+    border-style:ridge ;
+
+   background-image: url("https://i.postimg.cc/9fJ1PY0H/desktop-wallpaper-maroon-abstract-motion-backgrounds-maroon-abstract-background.jpg");
+  background-size: cover;      /* poori screen cover kare */
+  background-repeat: no-repeat; /* repeat na ho */
+  background-position: center;  /* center me rahe */
+}
+    
+    
+    header img {
+      width: 160px;
+    height:160px;
+    border-radius:50%;
+    border:4px solid #4CAF5A;
+
+    color:white;
+      
+      margin-bottom: 20px;
+      transition: transform 0.3s;
+    }
+    
+    header img:hover {
+      transform: scale(1.05);
+    }
+    #about{
+        color:white;
+        background-image:url("https://i.postimg.cc/FsdLhxg2/abstract-background-5500x2750-14023.png");
+        image-size:cover;
+}
+        background-image:url("https://i.postimg.cc/zfMG64Py/futuristic-background-design-23-2148503793.jpg");
+        background-size:cover;
+        
+    }
+    h2{
+        color:white
+        text-shadow:vertcal;
+        font-weight:bold;
+    }
+#skills{
+background-image:url("https://i.postimg.cc/KzLPq6Dr/YELLOW-LUXURY-BACKGROUND-1-577x1024-2.jpg");
+}
+    
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      transition: 0.3s;
+    }
+
+    .card .btn:hover {
+      background-color: #388e3c;
+      transform: scale(1.05);
+      transition: 0.3s;
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 999;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    
+#education{
+   background-image:url("https://i.postimg.cc/2yQMdBBs/429b6bc7fe509b708239999ad89b3eaabf7667511664511055.jpg");
+background-size:cover;
+color:white;
+}
+    nav a.nav-link.active {
+      font-weight: bold;
+      text-decoration: none;
+    }
+    a{
+        text-decoration:none;
+    }
+    #projects{
+        background-image:url("https://i.postimg.cc/KzLPq6Dr/YELLOW-LUXURY-BACKGROUND-1-577x1024-2.jpg");
+    }
+#container{
+    backgroung-colour:red;
+}
+#contact{
+    color:white;
+  background-image:url("https://i.postimg.cc/HL3hLgCn/black-background-with-dots-yellow-lights-1035-6360.jpg");
+}
+/* star style */
+    .star {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: rgba(255,100,100,0.8); /* red star */
+      border-radius: 50%;
+      animation: twinkle 2s infinite alternate;
+    }
+
+    /* twinkle animation */
+    @keyframes twinkle {
+      0%   { opacity: 0.2; transform: scale(0.5); }
+      50%  { opacity: 1; transform: scale(1.2); }
+      100% { opacity: 0.2; transform: scale(0.5); }
+    }
+
+    footer {
+    background-image:url("https://i.postimg.cc/qBKxbTZz/pngtree-modern-yellow-circular-halftones-isolated-on-black-background-vector-image-17385626.jpg");
+      padding: 10px 0;
+      text-align: center;
+      margin-top: 60px;
+      height:50px;
+    }
+    .social-icons{
+        height:80px;
+    }
+
+    .social-icons a {
+      color: inherit;
+      font-size: 1.5rem;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #388e3c;
+    }
+</style>
+
+</head>
+<body class="light-mode">
+
+  <!-- Theme Toggle Button -->
+  <button class="btn btn-success theme-toggle" id="themeToggle">Dark Mode</button>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-success fixed-top">
+    <div class="container">
+      <a class="navbar-brand text-white" href="#">Abhishek Yadav</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse text-center" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header Section -->
+  <header class="mt-5 pt-5" data-aos="fade-down">
+             
+  <img src='https://i.postimg.cc/8C7VX1zd/IMG-20250801-230621-520-webp.png' border='0' alt='IMG-20250801-230621-520-webp'/>
+    <h1 style="colour:white;">Abhishek Yadav</h1>
+    <p>BCA Student | Web Developer | Android App Developer</p>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="container my-5" data-aos="fade-up">
+    <h2 class="mb-4"><i class="fas fa-user"></i> About Me</h2>
+    <p>Hello! I am Abhishek Yadav, a BCA student from Ghazipur, Uttar Pradesh. I am passionate about web development, Android apps, and creating useful software projects.</p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="container my-5" data-aos="fade-up">
+    <h2 class="mb-4"><i class="fas fa-lightbulb"></i>Skills</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card p-3 text-center h-100">
+          <h5>HTML & CSS</h5>
+          <p>Responsive websites, modern layouts</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3 text-center h-100">
+          <h5>JavaScript</h5>
+          <p>Interactive websites and dynamic apps</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3 text-center h-100">
+          <h5>Java & Android</h5>
+          <p>Mobile app development</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="container my-5" data-aos="fade-up">
+    <h2 class="mb-4" ><i class="fas fa-graduation-cap"></i>Education</h2>
+    <ul>
+      <li>Bachelor of Computer Applications (BCA) -<a href="https://ashokainstitute.com/">Ashoka Institute of Technology & management </a> </li>
+      <li>Intermediate -<a href="https://share.google/8WFGl1ctPB8i5OdES">-Adarsh Inter College </li>
+    </ul>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="container my-5" data-aos="fade-up">
+    <h2 class="mb-4"><i class ="fas fa-briefcase"></i>Projects</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card p-3 h-100">
+          <h5>Payring App</h5>
+          <p>Instagram-like Android App</p>
+          <a href="https://abhishek3233m.github.io/My-under-construction-website/" class="btn btn-success">View</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3 h-100">
+          <h5>Prefix Converter AEY</h5>
+          <p>Android App for infix to prefix conversion</p>
+          <a href="https://abhishek3233m.github.io/My-under-construction-website/" class="btn btn-success">View</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3 h-100">
+          <h5>Weather App</h5>
+          <p>Real-time weather app with API</p>
+          <a href="https://abhishek3233m.github.io/weather-/" class="btn btn-success">View</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="container my-5" data-aos="fade-up">
+    <h2 class="mb-4">Contact Me</h2>
+    <p>Email: <a href="mailto:abhishekaey@zohomail.com">Abhishekaey@zohomail.in</a></p>
+    <p>Phone: <a href="tel:+91-7905503233">+91-7905503233</a></p>
+    
+    <div class="social-icons">
+    <footer>
+      <a href="https://www.linkedin.com/in/abhishek-yadav-076378390" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://youtube.com" target="blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.facebook.com/share/1BQW2rWaMV/" target="blank"><i class="fab fa-facebook"></i></a>
+  
+      <a href="https://www.instagram.com/abhishek3233m?igsh=d3ltbWh3MmY4eXFh" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://x.com/Abhishek7800ya?t=HlznGleTD88QhNM05VQ0YA&s=09" traget="blank"><i class="fab fa-x"></i></a>
+      <a href="http://snapchat com" target="blank"><i class="fab fa-snapchat"></i></a><br>
+    
+  
+  
+   <b>&copy; 2025 Abhishek Yadav. All Rights Reserved.</b>
+  </footer>
+  </div>
+</section>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000 });
+
+    // Dark/Light Mode Toggle
+    const themeBtn = document.getElementById('themeToggle');
+    themeBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      document.body.classList.toggle('light-mode');
+      themeBtn.innerText = document.body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode';
+    });
+    const starCount = 100; // number of stars
+  for(let i=0; i<starCount; i++){
+    const star = document.createElement('div');
+    star.className = 'star';
+    star.style.top = Math.random() * window.innerHeight + 'px';
+    star.style.left = Math.random() * window.innerWidth + 'px';
+    star.style.width = star.style.height = (Math.random()*2 + 1) + 'px'; // random size
+    star.style.animationDuration = (Math.random()*2 + 1) + 's'; // random twinkle speed
+    document.body.appendChild(star);
+  }
+  </script>
+</body>
+</html>
